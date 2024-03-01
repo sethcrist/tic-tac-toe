@@ -1,13 +1,85 @@
+html, body {
+    height: 100vh; /* Ensure the full height is taken */
+    margin: 0; /* Remove default margin */
+}
+
+body{
+    /* background-color: black; */
+    background-image: url('img/glow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+
+    text-align: center;
+    font-size: 5em;
+    margin-top: 5px;
+    /* color: rgb(46, 149, 6); /* White text color */
+    /* text-shadow: 0 0 60px rgb(166, 255, 0, 1);  */
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+}
+
+p {
+    margin-left: 10px;
+    text-decoration: underline;
+    font-size: 1.5em;
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
 .board {
     display: flex;
     flex-wrap: wrap;
     width: 610px;
     margin: auto;
 }
+
 .square {
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 180px;
+    width: 180px;
     text-align: center;
+    font-size: 6em;
+    color:aqua;
+    text-shadow: 0 0 6px rgb(0, 0, 0);
+
+
+}
+
+.btn {
+    font-size: 15px;
+    width: 15em;
+    height: 3em;
+    margin-left: 585px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: rgb(46, 149, 6);
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #06ac03, 0 0 40px #06ac03, 0 0 50px #06ac03, 0 0 60px #06ac03, 0 0 70px #06ac03;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #00ff04, 0 0 40px #00ff04, 0 0 50px #00ff04, 0 0 60px #00ff04, 0 0 70px #00ff04, 0 0 80px #00ff04;
+    }
 }

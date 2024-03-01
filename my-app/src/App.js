@@ -40,7 +40,7 @@ const App = () => {
             if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
                 setWinner(squares[a]);
                 setTimeout(() => {
-                    alert("You Win!");
+                    alert(`You Win ${playerMove}!`);
                     restartGame();
                 }, 500);
                 return;
